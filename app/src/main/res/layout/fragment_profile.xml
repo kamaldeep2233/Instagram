@@ -1,0 +1,257 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="Fragments.ProfileFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/white"
+            android:id="@+id/app_bar_layout_profile_frag">
+
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/profile_toolbar"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+        >
+
+            <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+               <TextView
+                       android:id="@+id/profile_fragment_username"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="username"
+                       android:textSize="18dp"
+                       android:textColor="@android:color/black"
+                       android:layout_centerVertical="true"
+                       android:maxLines="1"
+                       android:textStyle="bold"
+               />
+                <ImageView
+                        android:id="@+id/options_view"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/options"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_bar_layout_profile_frag">
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                    android:id="@+id/top_bar"
+                    android:padding="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView 
+                        android:id="@+id/pro_image_profile_frag"
+                        android:layout_width="120dp" 
+                        android:layout_height="120dp"
+                        android:src="@drawable/profile"/>
+                
+                <LinearLayout 
+                        android:layout_width="190dp" 
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:layout_height="90dp">
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                            
+                            <TextView
+                                    android:id="@+id/total_posts"
+                                    android:text="0"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                            <TextView
+                                    android:text="Posts"
+                                    android:textSize="12dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="7dp"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:id="@+id/total_followers"
+                                    android:text="0"
+                                    android:textStyle="bold"
+                                    android:textSize="12dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                            <TextView
+                                    android:text="Followers"
+                                    android:textSize="12dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="7dp"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:id="@+id/total_following"
+                                    android:text="0"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                            <TextView
+                                    android:text="Following"
+                                    android:textSize="12dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        
+                        
+                    </LinearLayout>
+
+                    <Button
+                            android:id="@+id/edit_account_settings_btn"
+                            android:text="Edit Profile"
+                            android:layout_width="170dp"
+                            android:layout_height="32dp"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="9dp"
+                            android:background="@drawable/buttons_background"
+
+                    />
+                    
+                </LinearLayout>
+
+                
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/mid_bar"
+                    android:padding="12dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/full_name_profile_frag"
+                        android:text="Full Name"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/bio_profile_frag"
+                        android:text="Bio"
+                        android:textSize="12dp"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@drawable/button_black_background"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <ImageButton
+                        android:id="@+id/images_grid_view_btn"
+                        android:src="@drawable/grid"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="1dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+
+                <ImageButton
+                        android:id="@+id/images_save_btn"
+                        android:src="@drawable/save_large_icon"
+                        android:layout_weight="1"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="1dp"
+                        android:scaleType="fitCenter"
+                        android:layout_height="49dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
